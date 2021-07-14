@@ -12,6 +12,12 @@ save_data = lambda d: open("data.json", "w").write(json.dumps(d, indent=4))
 get_days = lambda: get_data()["days_checked"]
 has_worked_today = lambda: today() in get_days()
 
+token = open("token", "r").read().strip()
+
+if len(token) < 10:
+    print("Client token could not be extracted from SUS_D_KEY...")
+    input("Idle... needs fix")
+    exit()
 
 def latest_data(): # simple getter function for latest data
     data = get_data()
@@ -34,13 +40,6 @@ def finished_work_today():
     if today() not in days:
         days.append(today())
         open("data.json", "w").write(json.dumps(data, indent=4))
-
-token = os.getenv("SUS_D_KEY", False)
-
-if token == False:
-    print("Client token could not be extracted from SUS_D_KEY...")
-    input("Idle... needs fix")
-    exit()
 
 client = discord.Client()
 
