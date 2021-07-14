@@ -1,1 +1,1 @@
-sudo pip install discord.py bs4 requests
+sudo pip3 install discord.py bs4 requests
