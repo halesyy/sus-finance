@@ -57,7 +57,7 @@ async def check_latest():
         if latest_date != old_date:
             latest_score_pn = f"+{latest_score}" if latest_score >= 0 else f"-{latest_score}"
             channel = await client.fetch_channel("864717912291672095")
-            response = await channel.send(f"(new) <@135605387373051905> the score for **{latest_date}** is **{latest_score_pn}** (bullish - bearish)")
+            response = await channel.send(f"(new) (<@135605387373051905>, <@305561661484433419>) the score for **{latest_date}** is **{latest_score_pn}** (bullish - bearish)")
             set_latest_date(latest_date, latest_score)
         else:
             print("> nothing new in daily work, ignoring")
