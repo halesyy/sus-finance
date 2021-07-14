@@ -44,7 +44,7 @@ if token == False:
 
 client = discord.Client()
 
-@loop(seconds=5)
+@loop(seconds=3600)
 async def check_latest():
     if has_worked_today():
         print("> still waiting...")

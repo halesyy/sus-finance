@@ -16,7 +16,7 @@ def work():
     headers = soup.find_all("header")
     if len(headers) == 0:
         print("> fatal error, page has restructured...")
-        return False, "error - page has restructured", {}
+        return "fatal", "error - page has restructured", {}
     rows = headers[0].find("table").find_all("tr")
     dates = {}
     latest_score = False
