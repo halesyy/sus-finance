@@ -1,0 +1,14 @@
+accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+accept-encoding: gzip, deflate, br
+accept-language: en-US,en;q=0.9
+cache-control: max-age=0
+referer: https://www.aaii.com/sentimentsurvey
+cookie: CFID=7348691; CFTOKEN=e280826b57d16c4e-5DCC0BC1-C3BB-C16A-1619128B841B3792; JSESSIONID=E9CE21CC8A9E88A72DD5C6D8DAD41392.cfusion; HASLOGGEDIN=""; EMAILSIGNUPSENT=0; nlbi_1875454=PFvZdDxD/gm76vFN5D1AxQAAAAC3W8V2lCpPkK/GRGMe9LSc; visid_incap_1875454=r4iiXloAS8q8AhJ6ip8norBU7mAAAAAAQUIPAAAAAABGpxp6tJyeh83X9wsnRnmy; incap_ses_404_1875454=bhbHGOUO3Q3B2v7fYE2bBQx37mAAAAAAYvpWAy8qL4ig4S1FCT4vdw==; nlbi_1875454_2147483646=8TOXEvn7izAzRLOY5D1AxQAAAABmg1TI8XygG59n6d4wh0Vj; reese84=3:jSKD9bXi8ZXWngDe3JXfcw==:unw4yywE3ZqPsWUVyUUHVH+qp6y98aCatbUSKhw3TZyHjyNZ2OP5G7AEbXAp14BuoDhf2riEN3C73WEsL9usMhqRD2k0q3y4yd3WlPIMVjfvs4N7rh4r1Mg3XKPQggFYVv7fkgaC5JGGa3DKf8Iyoa2uz0DGDUgoZjFsycwbqbkMM8bqLxiI59vclzsj4eBu/Tg9o42rY6vM7q6x0mQ4XbHPp7Z2lMKe43lyA8ebrm6j0UbBXLirpd7bnkaX3j2pQuDWYptsPFjVJXEyB/HPGcok15dHrQGsJd8oJOkue4ZGIaOycidM8m+SNXtJeVnO8/gaksHlwNLsic1JniXVk4+CKVEVmdClkZRcMUOPL3PA05chWc7ncXbPhKnXpDIwf2yE47mHrP+xgZEGSlXpRZaHB30XZNaLJF8o13AvvRw=:mrK+BxD+8Syh1QhDrpVSDzooVwdPD6SMz3Fn3eF6Zow=
+sec-ch-ua: " Not;A Brand";v="99", "Google Chrome";v="91", "Chromium";v="91"
+sec-ch-ua-mobile: ?0
+sec-fetch-dest: document
+sec-fetch-mode: navigate
+sec-fetch-site: same-origin
+sec-fetch-user: ?1
+upgrade-insecure-requests: 1
+user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36

@@ -2,7 +2,7 @@
 
 import threading
 
-def interval(func, sec):
+async def interval(func, sec):
     def func_wrapper():
         interval(func, sec)
         func()
