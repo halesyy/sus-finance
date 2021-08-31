@@ -44,7 +44,7 @@ def finished_work_today():
 client = discord.Client()
 
 @loop(seconds=3600)
-async def check_latest():
+async def latest_aaii_sentiment():
     if has_worked_today():
         print("> still waiting...")
     else:
@@ -57,17 +57,29 @@ async def check_latest():
         if latest_date != old_date:
             latest_score_pn = f"+{latest_score}" if latest_score >= 0 else f"-{latest_score}"
             channel = await client.fetch_channel("864717912291672095")
-            response = await channel.send(f"(new) (<@135605387373051905>, <@305561661484433419>) the score for **{latest_date}** is **{latest_score_pn}** (bullish - bearish)")
+            response = await channel.send(f"(new) (<@135605387373051905>, <@305561661484433419>) AAII for **{latest_date}** is **{latest_score_pn}** (bullish - bearish)")
             set_latest_date(latest_date, latest_score)
         else:
             print("> nothing new in daily work, ignoring")
         finished_work_today()
 
+# @loop(seconds=86400)
+@loop(seconds=86400)
+async def latest_crypto_greed_index():
+    from scraper import greed_index_score
+    latest = greed_index_score()
+    print("> latest greed score is:", latest)
+    todays_date = today()
+    # channel = await client.fetch_channel("882061562054066176") # staging
+    channel = await client.fetch_channel("864717912291672095") # live
+    response = await channel.send(f"(new) (<@135605387373051905>, <@305561661484433419>) CRYPTO GREED % for **{todays_date}** is **{latest}%** (index)")
+
 @client.event
 async def on_ready():
     print("We have logged in as {0.user}".format(client))
     print("Starting: scrape checker")
-    check_latest.start() # initialize
+    latest_aaii_sentiment.start() # initialize
+    latest_crypto_greed_index.start()
 
 @client.event
 async def on_message(message):
