@@ -41,6 +41,7 @@ def work():
 def greed_index_score():
     page = get("https://alternative.me/crypto/fear-and-greed-index/", headers=fromFile("headers/gindex.headers"))
     soup = BeautifulSoup(page.text, "html.parser")
+    print("> response size:", len(soup.text))
     greed_now_values = soup.find_all("div", class_="fng-value")
     if len(greed_now_values) == 4:
         greed_now = greed_now_values[0]
