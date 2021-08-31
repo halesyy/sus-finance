@@ -68,7 +68,7 @@ async def latest_aaii_sentiment():
 async def latest_crypto_greed_index():
     from scraper import greed_index_score
     latest = greed_index_score()
-    # print("latest greed score is", latest)
+    print("> latest greed score is:", latest)
     todays_date = today()
     # channel = await client.fetch_channel("882061562054066176") # staging
     channel = await client.fetch_channel("864717912291672095") # live
