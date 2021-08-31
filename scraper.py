@@ -38,5 +38,21 @@ def work():
         }
     return latest_date, latest_score, dates
 
+def greed_index_score():
+    page = get("https://alternative.me/crypto/fear-and-greed-index/", headers=fromFile("headers/gindex.headers"))
+    soup = BeautifulSoup(page.text, "html.parser")
+    greed_now_values = soup.find_all("div", class_="fng-value")
+    if len(greed_now_values) == 4:
+        greed_now = greed_now_values[0]
+        greed_now = greed_now.find("div", class_="fng-circle")
+        if greed_now == None and hasattr(greed_now, "text"):
+            return False
+        greed_now = greed_now.text
+        return greed_now
+    else:
+        # error, run error fun
+        return False
+
+
 if __name__ == "__main__":
     print(work())
