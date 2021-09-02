@@ -64,7 +64,7 @@ async def latest_aaii_sentiment():
         finished_work_today()
 
 # @loop(seconds=86400)
-@loop(seconds=86400)
+@loop(seconds=604800)
 async def latest_crypto_greed_index():
     from scraper import greed_index_score
     latest = greed_index_score()
