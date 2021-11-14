@@ -74,7 +74,7 @@ async def latest_crypto_greed_index():
     channel = await client.fetch_channel("864717912291672095") # live
     response = await channel.send(f"(new) (<@135605387373051905>, <@305561661484433419>) CRYPTO GREED % for **{todays_date}** is **{latest}%** (index)")
 
-@loop(seconds=5)
+@loop(seconds=3600)
 async def latest_open_insider_check():
     from scraper import insider_changes
     looking_at = ["UUUU", "ASAN", "EVER"]
