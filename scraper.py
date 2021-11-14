@@ -117,7 +117,7 @@ def insider_changes(tickers):
                         "DICK RIDER", "CUM SWALLOWER", "CUM REFUNDER"
                     ])
                     message = "(new) (<@135605387373051905>, <@305561661484433419>) "
-                    message += f"**{row_ticker}** {insider_name}, {title} ({profane}) {trade_move} {row_ticker}, {value} @ {price} (({filing_date}))"
+                    message += f"**{row_ticker}** {insider_name} - {title} ({profane}) {trade_move} {row_ticker}, {value} @ {price} (({filing_date}))"
                     print(">", message)
                     insider_cache[ticker] = [string_row] + insider_cache[ticker]
                     alerts.append(message)

@@ -99,7 +99,6 @@ async def on_ready():
 async def on_message(message):
     if message.author == client.user:
         return
-
     if message.content.startswith("$latest"):
         latest_date, latest_score = latest_data()
         await message.channel.send(f"The latest score for **{latest_date}** is **{latest_score}**")
