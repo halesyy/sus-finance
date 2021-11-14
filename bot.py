@@ -74,12 +74,26 @@ async def latest_crypto_greed_index():
     channel = await client.fetch_channel("864717912291672095") # live
     response = await channel.send(f"(new) (<@135605387373051905>, <@305561661484433419>) CRYPTO GREED % for **{todays_date}** is **{latest}%** (index)")
 
+@loop(seconds=5)
+async def latest_open_insider_check():
+    from scraper import insider_changes
+    looking_at = ["UUUU", "ASAN", "EVER"]
+    changes = insider_changes(looking_at)
+    print(changes)
+    channel = await client.fetch_channel("909375195498831892")
+    for message in changes:
+        response = await channel.send(message)
+
 @client.event
 async def on_ready():
     print("We have logged in as {0.user}".format(client))
     print("Starting: scrape checker")
-    latest_aaii_sentiment.start() # initialize
-    latest_crypto_greed_index.start()
+    # for dev
+    if False:
+        latest_aaii_sentiment.start() # initialize
+        latest_crypto_greed_index.start()
+    # for dev
+    latest_open_insider_check.start()
 
 @client.event
 async def on_message(message):
