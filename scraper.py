@@ -62,7 +62,7 @@ def greed_index_score():
         return False
 
 def insider_changes(tickers):
-    print("relative")
+    # print("relative")
     if not os.path.exists(os.path.join(__location__, "insider-cache.json")):
         open_relative("insider-cache.json", "w").write("{}")
     insider_cache = json.loads(open_relative("insider-cache.json", "r").read())
