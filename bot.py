@@ -89,9 +89,9 @@ async def on_ready():
     print("We have logged in as {0.user}".format(client))
     print("Starting: scrape checker")
     # for dev
-    if False:
-        latest_aaii_sentiment.start() # initialize
-        latest_crypto_greed_index.start()
+    # if False:
+    latest_aaii_sentiment.start() # initialize
+    latest_crypto_greed_index.start()
     # for dev
     latest_open_insider_check.start()
 
